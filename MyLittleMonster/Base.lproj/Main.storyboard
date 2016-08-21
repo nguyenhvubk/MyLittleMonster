@@ -78,14 +78,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="UfC-jr-Hao">
                                 <rect key="frame" x="195" y="145" width="210" height="80"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="Has-aq-1w8">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="Has-aq-1w8" customClass="DragImg" customModule="MyLittleMonster" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="hZ4-4O-HXh"/>
                                             <constraint firstAttribute="height" constant="80" id="jxq-wS-Bou"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="MfJ-u3-Lk1">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="MfJ-u3-Lk1" customClass="DragImg" customModule="MyLittleMonster" customModuleProvider="target">
                                         <rect key="frame" x="130" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="5f6-f9-Cbn"/>
@@ -160,6 +160,8 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="foodImg" destination="MfJ-u3-Lk1" id="EGW-zC-pR3"/>
+                        <outlet property="heartImg" destination="Has-aq-1w8" id="Wun-dW-xEh"/>
                         <outlet property="monsterImg" destination="vur-I9-6pO" id="C9w-V5-NoE"/>
                     </connections>
                 </viewController>
