@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         imgArr = [UIImage]()
         for x in 1...4 {
             let img = UIImage(named: "idle\(x).png")
-//            imgArr.append(img)
+//          imgArr.append(img)
             if let _img = img {
                 imgArr.append(_img)
             }

@@ -91,15 +91,26 @@
                                             <constraint firstAttribute="height" constant="80" id="5f6-f9-Cbn"/>
                                             <constraint firstAttribute="width" constant="80" id="Q03-Gu-AB2"/>
                                         </constraints>
+                                        <variation key="widthClass=regular" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="130" width="80" height="80"/>
+                                        </variation>
                                     </imageView>
                                 </subviews>
-                                <variation key="heightClass=compact" axis="vertical" spacing="0.0"/>
+                                <variation key="heightClass=compact" axis="vertical" misplaced="YES" spacing="25">
+                                    <rect key="frame" x="410" y="127" width="80" height="185"/>
+                                </variation>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="295" y="145" width="80" height="210"/>
+                                </variation>
                                 <variation key="heightClass=compact-widthClass=regular" spacing="25"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TW4-5S-Sig" firstAttribute="centerX" secondItem="C0a-lW-PIB" secondAttribute="centerX" constant="-4" id="2Fq-xW-Gcr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UfC-jr-Hao" secondAttribute="trailing" constant="40" id="3uT-RD-p2l">
+                                <variation key="heightClass=compact" constant="10"/>
+                            </constraint>
                             <constraint firstItem="TW4-5S-Sig" firstAttribute="centerY" secondItem="C0a-lW-PIB" secondAttribute="centerY" id="6EU-rx-jo8"/>
                             <constraint firstItem="WZC-fo-WMh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Anc-Lo-adH"/>
                             <constraint firstItem="TW4-5S-Sig" firstAttribute="centerY" secondItem="C0a-lW-PIB" secondAttribute="centerY" id="EJJ-GB-haG"/>
@@ -114,14 +125,13 @@
                             <constraint firstItem="C0a-lW-PIB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="agd-la-WdU"/>
                             <constraint firstAttribute="trailing" secondItem="DoE-Zy-SI0" secondAttribute="trailing" id="eAx-l5-bbs"/>
                             <constraint firstItem="UfC-jr-Hao" firstAttribute="top" secondItem="C0a-lW-PIB" secondAttribute="bottom" constant="33" id="kSh-QB-sdI">
-                                <variation key="heightClass=compact" constant="15"/>
+                                <variation key="heightClass=compact" constant="-30"/>
                                 <variation key="heightClass=compact-widthClass=regular" constant="33"/>
                             </constraint>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vur-I9-6pO" secondAttribute="bottom" constant="17" id="lKh-IY-uIz"/>
                             <constraint firstItem="C0a-lW-PIB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="q1H-IU-Riu"/>
                             <constraint firstItem="UfC-jr-Hao" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s3Y-Jn-oAH">
-                                <variation key="heightClass=compact" constant="150"/>
-                                <variation key="heightClass=compact-widthClass=regular" constant="200"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="250"/>
                             </constraint>
                             <constraint firstItem="C0a-lW-PIB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="tnX-Ac-AUj"/>
                             <constraint firstItem="C0a-lW-PIB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yGi-hL-rX0"/>
@@ -134,7 +144,18 @@
                                 <exclude reference="agd-la-WdU"/>
                                 <exclude reference="tnX-Ac-AUj"/>
                                 <exclude reference="6EU-rx-jo8"/>
+                                <exclude reference="3uT-RD-p2l"/>
                                 <exclude reference="Zui-Th-okG"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="3uT-RD-p2l"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="3uT-RD-p2l"/>
                             </mask>
                         </variation>
                     </view>
