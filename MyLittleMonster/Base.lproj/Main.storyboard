@@ -163,6 +163,9 @@
                         <outlet property="foodImg" destination="MfJ-u3-Lk1" id="EGW-zC-pR3"/>
                         <outlet property="heartImg" destination="Has-aq-1w8" id="Wun-dW-xEh"/>
                         <outlet property="monsterImg" destination="vur-I9-6pO" id="C9w-V5-NoE"/>
+                        <outlet property="skull1Img" destination="vii-D2-paz" id="XeF-KP-Faq"/>
+                        <outlet property="skull2Img" destination="G1H-qf-lKw" id="VHv-0T-MKl"/>
+                        <outlet property="skull3Img" destination="f6S-GF-hYb" id="K3w-GW-trr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

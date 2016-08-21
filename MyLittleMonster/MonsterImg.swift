@@ -16,7 +16,7 @@ class MonsterImg: UIImageView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        playIdle()
+        playIdle()//mac dinh choi luon
     }
 
     func playIdle (){
@@ -41,8 +41,8 @@ class MonsterImg: UIImageView {
     func playDead (){
         
 //        self.animationImages = nil
-//        self.image = UIImage(named: "dead5.png")
-//        
+        self.image = UIImage(named: "dead5.png")
+//
         var imgArr = [UIImage]()
         for x in 1...5 {
             let img = UIImage(named: "dead\(x).png")
@@ -53,7 +53,7 @@ class MonsterImg: UIImageView {
         
         self.animationImages = imgArr
         self.animationDuration = 0.8
-        self.animationRepeatCount = 0
+        self.animationRepeatCount = 1
         self.startAnimating()
     }
 
