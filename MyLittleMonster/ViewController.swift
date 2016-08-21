@@ -14,13 +14,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var foodImg: DragImg!
     @IBOutlet weak var heartImg: DragImg!
     
+    
     override func viewDidLoad() {
+        
+        foodImg.dropTarget = monsterImg
+        heartImg.dropTarget = monsterImg
+        
         super.viewDidLoad()
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("itemDropped:"), name: "onTargetDropped", object: nil)
         
     }
 
-    
+    func itemDropped(notif: AnyObject) {
+        print("Dropped")
+    }
 
 
 }
