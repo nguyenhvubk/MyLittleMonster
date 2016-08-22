@@ -36,8 +36,9 @@ class DragImg: UIImageView {
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
         if let touch = touches.first, let target = dropTarget {
-            let position = touch.locationInView(self.superview)
-            
+//            let position = touch.locationInView(self.superview)//don't work at lanscape mode
+            //work at lanscape mode
+            let position = touch.locationInView(self.superview?.superview)
             if CGRectContainsPoint(target.frame, position){
             NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "onTargetDropped", object: nil))
             }
