@@ -21,9 +21,9 @@ class MonsterImg: UIImageView {
 
     func playIdle (){
         
-//        self.animationImages = nil
+        self.animationImages = nil
 //        self.image = UIImage(named: "idle1.png")
-//        
+        
         var imgArr = [UIImage]()
         for x in 1...4 {
             let img = UIImage(named: "idle\(x).png")
@@ -40,9 +40,9 @@ class MonsterImg: UIImageView {
     
     func playDead (){
         
-//        self.animationImages = nil
+        self.animationImages = nil
         self.image = UIImage(named: "dead5.png")
-//
+
         var imgArr = [UIImage]()
         for x in 1...5 {
             let img = UIImage(named: "dead\(x).png")

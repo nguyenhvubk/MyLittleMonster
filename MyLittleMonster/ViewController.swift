@@ -36,6 +36,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let rand = arc4random_uniform(2)// 0 or 1
+        if rand == 0 {
+            heartImg.alpha = DIM_ALPHA
+            heartImg.userInteractionEnabled = false
+            
+            foodImg.alpha = OPEQUE
+            foodImg.userInteractionEnabled = true
+        } else if rand == 1 {
+            heartImg.alpha = OPEQUE
+            heartImg.userInteractionEnabled = true
+            
+            foodImg.alpha = DIM_ALPHA
+            foodImg.userInteractionEnabled = false
+        }
+
+        
         foodImg.dropTarget = monsterImg
         heartImg.dropTarget = monsterImg
         
@@ -117,6 +133,7 @@ class ViewController: UIViewController {
             if penalties >= maxPenalties {
                 print(penalties)
                 gameOver()
+                NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "resetGame", userInfo: nil, repeats: false)
             }
 
         }
@@ -143,6 +160,17 @@ class ViewController: UIViewController {
         sfxDeath.play()
         timer.invalidate()
         monsterImg.playDead()
+    }
+    
+    func resetGame () {
+        startTimer()
+        monsterImg.playIdle()
+        monsterHappy = false
+        penalties = 0
+        skull1Img.alpha = DIM_ALPHA
+        skull2Img.alpha = DIM_ALPHA
+        skull3Img.alpha = DIM_ALPHA
+        
     }
 
 }
